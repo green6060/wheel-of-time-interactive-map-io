@@ -3,13 +3,13 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import SearchIcon from '@material-ui/icons/Search';
+import ExploreIcon from '@material-ui/icons/Explore';
+import TimelineIcon from '@material-ui/icons/Timeline';
+import LeftDrawer from './LeftDrawer'
+import RightDrawer from './RightDrawer'
+import BottomDrawer from './BottomDrawer'
+
 
 const useStyles = makeStyles({
   list: {
@@ -18,12 +18,48 @@ const useStyles = makeStyles({
   fullList: {
     width: 'auto',
   },
+  flexWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  textAlignCenter: {
+    textAlign: 'center'
+  },
+  hover: {
+    backgroundColor: 'rgb(225, 225, 225)',
+    '&:hover': {
+      backgroundColor: 'rgb(200, 200, 200)'
+    }
+  },
+  leftPosition: {
+    position: 'fixed', left: '1%', top: '50%',
+  },
+  rightPosition: {
+    position: 'fixed', right: '1%', top: '50%',
+  },
+  bottomPosition: {
+    position: 'fixed', bottom: '1%', left: '50%',
+  },
 });
+
+const renderList = (anchor) => {
+  switch (anchor) {
+    case 'left':
+      return <LeftDrawer />
+    
+    case 'right':
+      return <RightDrawer />
+
+    case 'bottom':
+      return <BottomDrawer />
+    default:
+      throw new Error()
+  }
+}
 
 export default function Nav() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
     left: false,
     bottom: false,
     right: false,
@@ -37,44 +73,58 @@ export default function Nav() {
     setState({ ...state, [anchor]: open });
   };
 
+  const generateArrow = (anchor) => {
+    switch (anchor) {
+      case 'left':
+        // return <ArrowRightOutlinedIcon style={{fontSize: '50px'}}/>
+        return <><div style={{fontSize: '20px'}}>Map</div> <ExploreIcon style={{fontSize: '30px'}}/></>
+      
+      case 'right':
+        // return <ArrowLeftOutlinedIcon style={{fontSize: '50px'}}/>
+        return <><SearchIcon style={{fontSize: '30px'}}/><div style={{fontSize: '20px'}}>Filters</div></>
+
+      case 'bottom': 
+        // return <ArrowDropUpOutlinedIcon style={{fontSize: '50px'}}/>
+        return <><div style={{fontSize: '20px'}}>Timeline</div><TimelineIcon style={{fontSize: '30px'}}/></>
+
+      default:
+        break;
+    }
+  }
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
-        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+        [classes.fullList]: anchor === 'bottom',
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      {renderList(anchor)}
     </div>
   );
 
   return (
-    <div>
+    <div className={classes.flexWrapper}>
       {['left', 'right', 'bottom'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
+        <>
+          <Button 
+            className={clsx(classes.hover, {
+              [classes.leftPosition]: anchor === 'left',
+              [classes.rightPosition]: anchor === 'right',
+              [classes.bottomPosition]: anchor === 'bottom',
+            })} 
+            onClick={toggleDrawer(anchor, true)}
+          >
+            {generateArrow(anchor)}
+          </Button>
+          <React.Fragment className={classes.textAlignCenter} key={anchor}>
+            <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+              {list(anchor)}
+            </Drawer>
+          </React.Fragment>
+        </>
       ))}
     </div>
   );
