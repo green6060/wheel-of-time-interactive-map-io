@@ -9,6 +9,7 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import LeftDrawer from './LeftDrawer'
 import RightDrawer from './RightDrawer'
 import BottomDrawer from './BottomDrawer'
+import { FilterContext } from '../../Helper/common';
 
 
 const useStyles = makeStyles({
@@ -29,7 +30,8 @@ const useStyles = makeStyles({
     backgroundColor: 'rgb(225, 225, 225)',
     '&:hover': {
       backgroundColor: 'rgb(200, 200, 200)'
-    }
+    },
+    margin: '0.5%'
   },
   leftPosition: {
     position: 'fixed', left: '1%', top: '50%',
@@ -42,21 +44,6 @@ const useStyles = makeStyles({
   },
 });
 
-const renderList = (anchor) => {
-  switch (anchor) {
-    case 'left':
-      return <LeftDrawer />
-    
-    case 'right':
-      return <RightDrawer />
-
-    case 'bottom':
-      return <BottomDrawer />
-    default:
-      throw new Error()
-  }
-}
-
 export default function Nav() {
   const classes = useStyles();
   const [state, setState] = React.useState({
@@ -64,13 +51,28 @@ export default function Nav() {
     bottom: false,
     right: false,
   });
-
-  const toggleDrawer = (anchor, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
+  const formik = {}
+  
+  const renderList = (anchor) => {
+    switch (anchor) {
+      case 'left':
+        return <LeftDrawer />
+      
+      case 'right':
+        return( 
+          <FilterContext.Provider value={{formikObj: formik}}>
+            <RightDrawer />
+          </FilterContext.Provider>
+        )
+      case 'bottom':
+        return <BottomDrawer />
+      default:
+        throw new Error()
     }
+  }
 
-    setState({ ...state, [anchor]: open });
+  const toggleDrawer = (anchor) => () => {
+    setState({ ...state, [anchor]: !state[anchor] });
   };
 
   const generateArrow = (anchor) => {
@@ -98,34 +100,28 @@ export default function Nav() {
         [classes.fullList]: anchor === 'bottom',
       })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
     >
       {renderList(anchor)}
     </div>
   );
 
   return (
-    <div className={classes.flexWrapper}>
-      {['left', 'right', 'bottom'].map((anchor) => (
-        <>
-          <Button 
-            className={clsx(classes.hover, {
-              [classes.leftPosition]: anchor === 'left',
-              [classes.rightPosition]: anchor === 'right',
-              [classes.bottomPosition]: anchor === 'bottom',
-            })} 
-            onClick={toggleDrawer(anchor, true)}
-          >
-            {generateArrow(anchor)}
-          </Button>
-          <React.Fragment className={classes.textAlignCenter} key={anchor}>
-            <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-              {list(anchor)}
-            </Drawer>
-          </React.Fragment>
-        </>
-      ))}
-    </div>
+      <div className={classes.flexWrapper}>
+        {['left', 'bottom', 'right'].map((anchor) => (
+          <>
+            <Button 
+              className={classes.hover} 
+              onClick={toggleDrawer(anchor)}
+            >
+              {generateArrow(anchor)}
+            </Button>
+            <React.Fragment className={classes.textAlignCenter} key={anchor}>
+              <Drawer variant="persistent" anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor)}>
+                {list(anchor)}
+              </Drawer>
+            </React.Fragment>
+          </>
+        ))}
+      </div>
   );
 }
