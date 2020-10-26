@@ -31,7 +31,8 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: 'rgb(200, 200, 200)'
     },
-    margin: '0.5%'
+    margin: '0.5%',
+    zIndex: '100'
   },
   leftPosition: {
     position: 'fixed', left: '1%', top: '50%',
@@ -79,7 +80,7 @@ export default function Nav() {
     switch (anchor) {
       case 'left':
         // return <ArrowRightOutlinedIcon style={{fontSize: '50px'}}/>
-        return <><div style={{fontSize: '20px'}}>Map</div> <ExploreIcon style={{fontSize: '30px'}}/></>
+        return <><div style={{fontSize: '20px'}}>Menu</div> <ExploreIcon style={{fontSize: '30px'}}/></>
       
       case 'right':
         // return <ArrowLeftOutlinedIcon style={{fontSize: '50px'}}/>
@@ -106,21 +107,21 @@ export default function Nav() {
   );
 
   return (
-      <div className={classes.flexWrapper}>
+      <div className={classes.flexWrapper} >
         {['left', 'bottom', 'right'].map((anchor) => (
-          <>
+          <div key={anchor}>
             <Button 
               className={classes.hover} 
               onClick={toggleDrawer(anchor)}
             >
               {generateArrow(anchor)}
             </Button>
-            <React.Fragment className={classes.textAlignCenter} key={anchor}>
+            <div className={classes.textAlignCenter} key={anchor}>
               <Drawer variant="persistent" anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor)}>
                 {list(anchor)}
               </Drawer>
-            </React.Fragment>
-          </>
+            </div>
+          </div>
         ))}
       </div>
   );

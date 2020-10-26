@@ -43,7 +43,7 @@ export default function LeftDrawer() {
       <>
         <List>
           {['Map', 'About', 'Donate'].map((text) => (
-            <Link to={`${text}`} className={classes.linkText}>
+            <Link key={text} to={`${text}`} className={classes.linkText}>
               <ListItem className={classes.hover} button key={text}>
                   <ListItemText primary={text} />
                   <ListItemIcon>{generateSvg(text)}</ListItemIcon>

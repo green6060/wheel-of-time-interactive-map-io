@@ -9,7 +9,7 @@ import {
 import Nav from './Components/Nav/Nav'
 import About from './Pages/About/About'
 import Donate from './Pages/Donate/Donate'
-import Map from './Pages/Map/Map'
+import MapContainer from './Pages/Map/Map';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Nav/>
-          <Map/>
+          <MapContainer/>
         </Route>
         <Route path='/Donate'>
           <Nav/>
