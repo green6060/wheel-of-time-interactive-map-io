@@ -97,7 +97,6 @@ export default function Nav() {
 
   const list = (anchor) => (
     <div
-      style={{backgroundColor: '#ababab',}}
       className={clsx(classes.list, {
         [classes.fullList]: anchor === 'bottom',
       })}

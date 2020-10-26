@@ -1,49 +1,89 @@
-import React from 'react'
-import * as THREE from 'three';
-import L from 'leaflet'
-import Background from '../Helper/assets/wheelOfTimeMap.png'
-import Smoke from '../Helper/assets/smoke.png'
-export const FilterContext = React.createContext();
+import React, { useRef, useState } from 'react'
+import * as THREE from 'three/src/Three'
+import { Canvas, useFrame } from 'react-three-fiber'
 
-export const BookNames = [
-    'The Eye of the World',
-    'The Great Hunt',
-    'The Dragon Reborn',
-    'The Shadow Rising',
-    'The Fires of Heaven',
-    'Lord of Chaos',
-    'A Crown of Swords',
-    'The Path of Daggers',
-    "Winter's Heart",
-    'Crossroads of Twilight',
-    'Knife of Dreams',
-    'The Gathering Storm',
-    'Towers of Midnight',
-    'A Memory of Light',
-] 
+function RainGeometry(props) {
 
-export const setMap = () => {
-    const map = L.map('mapid', {
-        crs: L.CRS.Simple,
-        minZoom: 0.5,
-        maxZoom: 2.5,
+
+    // Create Geomotry, for Rain
+    let rainGeometry = new THREE.Geometry();
+    for(let i=0; i < 1500; i++) {
+        // Create Raindrops, as vectors, efficiently
+      let rainDrop = new THREE.Vector3(
+        Math.random() * 400 -200,
+        Math.random() * 500 - 250,
+        Math.random() * 400 - 200
+      );
+      rainDrop.velocity = {};
+      rainDrop.velocity = 0;
+      rainGeometry.vertices.push(rainDrop);
+    }
+
+
+    // Create Material, for Rain
+    let rainMaterial = new THREE.PointsMaterial({
+      color: 0xaaaaaa,
+      size: 0.1,
+      transparent: true
     });
-    const bounds = [[0,0], [1000,1000]];
-    L.imageOverlay(Background, bounds).addTo(map);
-    map.setMaxBounds(bounds);
-    map.on('drag', () => {
-        map.panInsideBounds(bounds, { animate: false });
-    });
-    map.fitBounds(bounds);
+
+  // This reference will give us direct access to the mesh
+  const mesh = useRef()
+
+  // Animation
+  useFrame((rainGeometry) => {
+    // Animation that occurs every frame
+            // rainGeometry.vertices.forEach(p => {
+            //         p.velocity -= 0.1 + Math.random() * 0.1;
+            //         p.y += p.velocity;
+            //         if (p.y < -200) {
+            //             p.y = 200;
+            //             p.velocity = 0;
+            //         }
+            //         });
+            //         rainGeometry.verticesNeedUpdate = true;
+            //         rain.rotation.y +=0.002;
+    
+  })
+
+  return (
+    <mesh
+      {...props}
+      ref={mesh}
+      scale={[1, 1, 1]}
+    >
+      <boxBufferGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={'white'} />
+    </mesh>
+  )
 }
+
+export default function Rain() {
+  return (
+    <Canvas>
+      <ambientLight  color={0x555555}/>
+      <directionalLight color={0xffeedd} position={[0,0,1]}/>
+      <pointLight color={0x062d89} intensity={30} distance={500} decay={1.7} />
+      <RainGeometry />
+      <RainGeometry />
+    </Canvas>
+  )
+}
+
+//     // Create Rain
+//     rain = new THREE.Points(rainGeo, rainMaterial);
+//     // Add Rain to Scene
+//     scene.add(rain);
+
+
+
+
 
 /* Initialize Rain Animation*/
 // let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 15000;
 // setRain(scene, camera, renderer, cloudParticles, flash, rain, rainGeo, rainCount)
 
 // const setRain = (scene, camera, renderer, cloudParticles, flash, rain, rainGeo, rainCount) => {
-//     // Create a new scene
-//     scene = new THREE.Scene();
 
 //     ////// CAMERA
 //     //
@@ -55,39 +95,8 @@ export const setMap = () => {
 //     camera.rotation.y = -0.12;
 //     camera.rotation.z = 0.27;
 
-//     //////// LIGHTS
-//     //
-//     //// Create a Ambient Light
-//     let ambient = new THREE.AmbientLight(0x555555);
-//     //// Add Ambient Light to Scene
-//     scene.add(ambient);
-//     //// Create Directional Light
-//     let directionalLight = new THREE.DirectionalLight(0xffeedd);
-//     //// Set Position of Directional Light
-//     directionalLight.position.set(0,0,1);
-//     //// Add Directional Light to Scene
-//     scene.add(directionalLight);
-//     //// Create Point Light (for Lightning Effect)
-//     // THREE.PointLight(color : Integer, intensity : Float, distance : Number, decay : Float) 
-//     flash = new THREE.PointLight(0x062d89, 30, 500 ,1.7);
-//     //// Set Position of Point Light
-//     flash.position.set(200,300,100);
-//     //// Add Point Light to Scene
-//     scene.add(flash);
-
-//     // Create Renderer
-//     renderer = new THREE.WebGLRenderer();
-
 //     // Create Fog
 //     scene.fog = new THREE.FogExp2(0x11111f, 0.002);
-
-//     // Set Renderer Color
-//     renderer.setClearColor(scene.fog.color);
-//     // Set Renderer Size
-//     renderer.setSize(window.innerWidth, window.innerHeight);
-
-//     // Append Renderer to DOM
-//     document.querySelector('#mapid').appendChild(renderer.domElement);
 
 //     ////// RAIN
 //     //

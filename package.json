@@ -16,7 +16,10 @@
     "react-leaflet": "^2.8.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.4"
+    "react-scripts": "3.4.4",
+    "react-three-fiber": "^5.1.4",
+    "three": "^0.121.1",
+    "threejs-meshline": "^2.0.12"
   },
   "scripts": {
     "start": "react-scripts start",

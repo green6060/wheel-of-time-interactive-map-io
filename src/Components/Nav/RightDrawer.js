@@ -2,7 +2,6 @@ import React from 'react';
 import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import { FormControl, InputLabel, makeStyles, MenuItem, Select } from '@material-ui/core';
 import { useFormik } from 'formik';
 import SelectDropdown from '../SelectDropdown/SelectDropdown';
 import { BookNames } from '../../Helper/common';
@@ -80,7 +79,6 @@ export default function RightDrawer() {
     formik.setFieldValue('book', undefined)
     formik.setFieldValue('spoilerFilter', value)
   }
-
   return (
     <form onSubmit={formik.handleSubmit}>
       <FormGroup>

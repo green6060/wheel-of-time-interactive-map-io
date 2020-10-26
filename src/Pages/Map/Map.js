@@ -1,24 +1,16 @@
 import React from 'react'
-import L from 'leaflet'
-
+import RainDemo from '../../Components/ThreeJsRainDemo/ThreeJsRainDemo';
+import { setMap } from '../../Helper/common';
 import Background from '../../Helper/assets/wheelOfTimeMap.png'
 
 export default function MapContainer() {
     
     React.useEffect(() => {
-        const map = L.map('mapid', {
-            crs: L.CRS.Simple,
-            minZoom: 0.5,
-            maxZoom: 2.5,
-        });
-        const bounds = [[0,0], [1000,1000]];
-        L.imageOverlay(Background, bounds).addTo(map);
-        map.setMaxBounds(bounds);
-        map.on('drag', function() {
-            map.panInsideBounds(bounds, { animate: false });
-        });
-        map.fitBounds(bounds);
+        /* Initialize Map */
+        // setMap()
     }, [])
+
+    
 
     return (
         <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -30,9 +22,12 @@ export default function MapContainer() {
                     left: '0px', 
                     top: '0px', 
                     zIndex: '1',
+                    // backgroundColor: '#1677b3'
+                    backgroundImage: "url(" + Background + ")"
                 }}
                 id="mapid"
             >
+                <RainDemo />
                 {/* This is where the interactive map will go */}
             </div>
         </div>
