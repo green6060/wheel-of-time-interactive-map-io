@@ -1,0 +1,315 @@
+{
+    "events" : [
+        {
+            "title": "The first siege of Emond's Field",
+            "description": "In the evening, the farm and village are attacked by Trollocs. Rand constructs a litter and drags the wounded Tam towards Emond's Field. Tam has fever-dreams of the past. At dawn, Rand arrives, dragging his father, at Emond's Field, where Moiraine heals Tam.",
+            "date": "March 23, 998 NE",
+            "location": "Emond's Field, Two Rivers",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"},
+                {"name": "Thomdril Merrilin", "url": "/api/characters/8"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "1"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "The three ta'veren set out for Tar Valon",
+            "description": "Moiraine convinces Rand, Matt, and Perrin they must leave Emond's Field. Rand dreams of Shayol Ghul, Dragonmount and Tar Valon. Rand, Mat and Perrin leave Emond's Field with Moiraine, Lan, Egwene and Thom along the North Road to Taren Ferry, avoiding shadowspawn. They cross the Taren, after which Moiraine destroys the ferry. They make camp near the river. Moiraine guides Egwene through her first use of the Power, while Lan begins teaching the boys how to use their weapons. They hear of Whitecloaks in Baerlon, trouble in Saldaea, and a battle in Ghealdan. Thom tells Rand some of the Prophecies of the Dragon, and they boys begin to have dreams of Ba'alzamon. The group meets Min Farshaw, have an encounter with the Whitecloaks, are attacked by a fade, and leave Baerlon.",
+            "date": "March 24, 998 NE",
+            "location": "Emond's Field, Two Rivers",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"},
+                {"name": "Thomdril Merrilin", "url": "/api/characters/8"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "10"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Separated at Shadar Logath",
+            "description": "A battle with Trollocs and Myrddraal ensues. They take refuge in Shadar Logoth. Rand, Mat and Perrin explore and encounter Mordeth, where Matt steals a cursed ruby hilted dagger in secret. Lan reports Trollocs and Myrddraal in the city, moving towards them. They decide to leave, and are scattered by Mashadar, (although no one is hurt).",
+            "date": "April 3, 998 NE",
+            "location": "Shadar Logath, Western Andor",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"},
+                {"name": "Thomdril Merrilin", "url": "/api/characters/8"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "20"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand, Matt, and Thom escape via Bayle Doman and 'The Spray'",
+            "description": "Rand meets up with Mat and Thom, and they make for the river. They find Bayle Domon's boat, Spray, and board just ahead of the Trollocs. They begin their journey to Caemlyn, where they hope to find the rest of the group.",
+            "date": "April 3, 998 NE",
+            "location": "Shadar Logath, Western Andor",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Thomdril Merrilin", "url": "/api/characters/8"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "20"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Nynaeve finds Moiraine and Lan, and head for Caemlyn",
+            "description": "Nynaeve finds Moiraine and Lan, and begin heading for Caemlyn. Moiraine tells her she can channel the Power. They set off, following the river downstream.",
+            "date": "April 4, 998 NE",
+            "location": "Shadar Logath, Western Andor",
+            "charactersInvolved": [
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "21"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Perrin and Egwene set off for Caemlyn",
+            "description": "Perrin meets up with Egwene. They decide to set off toward Caemlyn in an attempt to meet with the group, albeit unintentionally head off in the wrong direction.",
+            "date": "April 4, 998 NE",
+            "location": "Shadar Logath, Western Andor",
+            "charactersInvolved": [
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "22"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Perrin and Egwene encounter Elyas Machera",
+            "description": "Perrin and Egwene encounter Elyas Machera, who tells them they are going the wrong direction. Perrin learns he can talk to the wolves. They begin traveling together.",
+            "date": "April 7, 998 NE",
+            "location": "Outside of Shadar Logath, Western Andor",
+            "charactersInvolved": [
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "23"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Perrin, Egwene and Elyas encounter a Tinker caravan",
+            "description": "They are offered food and rest, learn of Tinker culture, and agree to travel with them for a time.",
+            "date": "April 10, 998 NE",
+            "location": "Between Shadar Logath and Caemlyn",
+            "charactersInvolved": [
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "25"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand, Matt, and Thom encounter a Fade in Whitebridge",
+            "description": "Thom battles the Fade, giving the boys a chance to run. They set off down the Caemlyn Road. This begins a long series of sleeping in bushes, working at farms for dinner and a nights rest, and performing at local taverns.",
+            "date": "April 16, 998 NE",
+            "location": "Whitebridge, Andor",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Thomdril Merrilin", "url": "/api/characters/8"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "26"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Egwene Perrin and Elyas leave the Tinkers, and have a run-in with the Whitecloaks",
+            "description": "After taking refuge in an abandoned stedding, they are captured by Whitecloaks led by Geofram Bornhald. Hopper, a wolf Perrin had grown close with, is killed, and Perrin kills two Whitecloaks in a rage. Elyas manages to escape, although Perrin and Egwayne are taken prisoners as darkfriends.",
+            "date": "April 17th, 998 NE",
+            "location": "Between Shadar Logath and Camelyn, heading South-East.",
+            "charactersInvolved": [
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "29"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand and Matt arrive at Four Kings, where they are confronted by Darkfriend Howal Gode",
+            "description": "Rand channels unknowingly - lightning strikes the inn, killing Gode. They escape into the night, with Mat temporarily blinded.",
+            "date": "April 27, 998 NE",
+            "location": "Four Kings, Andor",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "32"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand and Matt continue their journey, attempting to recover while encountering dark friends.",
+            "description": "They reach Market Sheran at dusk, and stay at Rulan Allwine's inn. At evening the next day, they arrive at another small village. At the inn, The Queen's Man, Rand falls ill ( a reaction to channelling two days ago) so they stay in the stable, where a female Darkfriend, Mili Skane, tries to kill Rand and Mat.",
+            "date": "April 27th, 998 NE",
+            "location": "Villages and towns along Camelyn Road",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "33"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand and Matt finally arrive in Caemlyn in secrecy.",
+            "description": "After spending the last couple of days traveling by night, hiding, and eventually blending in with a line of travelers, they arrive, where Basel Gill (a contact of Moiraine's) gives them a room at The Queen's Blessing. Rand meets Loial in the library.",
+            "date": "May 2, 998 NE",
+            "location": "Caemlyn, The Queen's Blessing inn",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "35"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Moiraine, Lan and Nynaeve rescue Perrin and Egwene.",
+            "description": "Using a series of distractions using nearby wolves, the One Power, and Nynaeve's smarts, Perrin and Egwene are snuck out of bondage in the commotion.",
+            "date": "May 5, 998 NE",
+            "location": "Whitecloak camp between Caemlyn and an unknown abandoned steading",
+            "charactersInvolved": [
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "37"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Rand watches as Logain, the false dragon, is paraded through Caemlyn",
+            "description": "In order to get a better view, he climbs the Palace garden wall. After falling into the garden, he meets Elayne Trakand, Gawyn Trakand and Galadedrid Damodred. He is taken to see Queen Morgase Trakand and Elaida do Avriny a'Roihan.",
+            "date": "May 5, 998 NE",
+            "location": "The Royal Palace, Caemlyn",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Elayne Trakand", "url": "/api/characters/9"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "39"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "The party is reunited",
+            "description": "After being released, Rand returns to the inn, where he discovers everyone gathered. Moiraine heals Mat temporarily of the dagger's influence, and decides they must use the Ways to reach The Eye of the World, despite Loial's objections.",
+            "date": "May 5, 998 NE",
+            "location": "The Queen's Blessing inn, Caemlyn",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "43"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "The party travels the Ways",
+            "description": "They travel for over two days, avoiding the Black Wind. They emerge from the Ways at mid-morning and travel to Fal Dara.",
+            "date": "May 07, 998 NE",
+            "location": "Fal Dara",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "45"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Elayne and Gawyn leave Caemlyn for Tar Valon",
+            "description": "Logain's escort, as well as Elaida, accompanies with them.",
+            "date": "May 07, 998 NE",
+            "location": "Caemlyn",
+            "charactersInvolved": [
+                {"name": "Elayne Trakand", "url": "/api/characters/9"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "40"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Traveling to the Blight",
+            "description": "Rand's party leave Fal Dara at dawn and travel to the Great Blight. They make camp near the Seven Towers.",
+            "date": "May 8, 998 NE",
+            "location": "The Blight",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "48"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "Confrontation at the Eye of the World",
+            "description": "The party reaches the Eye of the World, and meet the Green Man. Confrontation with Aginor and Balthamel ensues. Balthamel injures Nynaeve, but he and the Green Man destroy each other. Rand and Aginor duel for control of the Eye - Aginor draws too much of the Power and is killed. Rand's confrontation with Ba'alzamon results in victory at Tarwin's Gap and the apparent death of Ba'alzamon. Where the Eye was, the party find a broken Seal, the Horn of Valere, and the Dragon Banner.",
+            "date": "May 9, 998 NE",
+            "location": "Eye of the World, The Blight",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "52"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "The party travels back to Fal Dara",
+            "description": "They leave the remains of the Green Man's garden and again camp near the Seven Towers. Moiraine tells Agelmar the Horn must be taken to Illian. Rand realizes he can never go home.",
+            "date": "May 11, 998 NE",
+            "location": "Fal Dara",
+            "charactersInvolved": [
+                {"name": "Rand al'thor", "url": "/api/characters/1"},
+                {"name": "Matrim Cauthon", "url": "/api/characters/2"},
+                {"name": "Perrin Aybara", "url": "/api/characters/3"},
+                {"name": "Egwene al'Vere", "url": "/api/characters/4"},
+                {"name": "Nynaeve al'Meara", "url": "/api/characters/5"},
+                {"name": "Moiraine Damodred", "url": "/api/characters/6"},
+                {"name": "al'Lan Mandragoran", "url": "/api/characters/7"}
+            ],
+            "book": {"title": "The Eye of the World", "chapter": "53"},
+            "tvSeries": {"season": "", "episode": ""}
+        },
+        {
+            "title": "",
+            "description": "",
+            "date": "",
+            "location": "",
+            "charactersInvolved": [
+            ],
+            "book": {"title": "", "chapter": ""},
+            "tvSeries": {"season": "", "episode": ""}
+        }  
+    ]
+}
