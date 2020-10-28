@@ -9,7 +9,7 @@ import {
 import Nav from './Components/Nav/Nav'
 import About from './Pages/About/About'
 import Donate from './Pages/Donate/Donate'
-import MapContainer from './Pages/Map/Map';
+import MapContainer from './Pages/Map/Map2';
 
 function App() {
   return (

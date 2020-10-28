@@ -10,6 +10,7 @@ import LeftDrawer from './LeftDrawer'
 import RightDrawer from './RightDrawer'
 import BottomDrawer from './BottomDrawer'
 import { FilterContext } from '../../Helper/common';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 const useStyles = makeStyles({
@@ -22,6 +23,11 @@ const useStyles = makeStyles({
   flexWrapper: {
     display: 'flex',
     justifyContent: 'center',
+    position: 'fixed',
+    top: '0',
+    left: '40%',
+    zIndex: '100',
+    margin: '0.5%',
   },
   textAlignCenter: {
     textAlign: 'center'
@@ -31,8 +37,6 @@ const useStyles = makeStyles({
     '&:hover': {
       backgroundColor: 'rgb(200, 200, 200)'
     },
-    margin: '0.5%',
-    zIndex: '100'
   },
   leftPosition: {
     position: 'fixed', left: '1%', top: '50%',

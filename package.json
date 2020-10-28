@@ -14,10 +14,12 @@
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-leaflet": "^2.8.0",
+    "react-map-interaction": "^2.0.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.4",
     "react-three-fiber": "^5.1.4",
+    "react-zoom-pan-pinch": "^1.6.1",
     "three": "^0.121.1",
     "threejs-meshline": "^2.0.12"
   },
