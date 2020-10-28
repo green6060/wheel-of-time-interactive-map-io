@@ -5,6 +5,7 @@ import Switch from '@material-ui/core/Switch';
 import { useFormik } from 'formik';
 import SelectDropdown from '../SelectDropdown/SelectDropdown';
 import { BookNames } from '../../Helper/common';
+// import Background from 'https://www.transparenttextures.com/patterns/handmade-paper.png'
 
 
 // const useStyles = makeStyles((theme) => ({
@@ -69,7 +70,6 @@ export default function RightDrawer() {
     },
     validate,
     onSubmit: (values, { setSubmitting }) => {
-      console.log('values: ' + values)
       setSubmitting(false)
    }},
   )
@@ -80,7 +80,14 @@ export default function RightDrawer() {
     formik.setFieldValue('spoilerFilter', value)
   }
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form 
+      onSubmit={formik.handleSubmit}
+      // style={{
+      //   height: '100%',
+      //   backgroundImage: "url(https://www.transparenttextures.com/patterns/light-paper-fibers.png)",
+      //   backgroundColor: '#CEC395',
+      // }}
+    >
       <FormGroup>
         <FormControlLabel
           style={{display: 'flex', justifyContent: 'center'}}
