@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function BottomDrawer() {
+export default function Map() {
     return (
         <div>
-            Bottom
+            Map Page
         </div>
     )
 }

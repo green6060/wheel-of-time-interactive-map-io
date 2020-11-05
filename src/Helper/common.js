@@ -1,6 +1,9 @@
+import Axios from 'axios';
 import React from 'react'
 
-export const FilterContext = React.createContext();
+export const UserContext = React.createContext()
+
+export const FilterFormContext = React.createContext();
 
 export const BookNames = [
     'The Eye of the World',
@@ -18,3 +21,25 @@ export const BookNames = [
     'Towers of Midnight',
     'A Memory of Light',
 ]
+
+export const axiosLogin = async (attemptedEmail, attemptedPassword) => {
+    return Axios({
+        method: 'get',
+        url: 'http://localhost:3001/api/user',
+        data: {
+          email: attemptedEmail,
+          password: attemptedPassword,
+        }
+    });
+}
+
+export const axiosCreateUser = async (attemptedEmail, attemptedPassword) => {
+    return Axios({
+        method: 'post',
+        url: 'http://localhost:3001/api/user',
+        data: {
+          email: attemptedEmail,
+          password: attemptedPassword,
+        }
+    })
+}

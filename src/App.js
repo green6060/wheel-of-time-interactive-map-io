@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import Nav from './Components/Nav/Nav'
+import UserCredentialsContext from './Components/UserCredentialsContext/UserCredentialsContext';
 import About from './Pages/About/About'
 import Donate from './Pages/Donate/Donate'
 import MapContainer from './Pages/Map/Map2';
@@ -16,16 +17,22 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/'>
-          <Nav/>
-          <MapContainer/>
+          <UserCredentialsContext>
+            <Nav/>
+            <MapContainer/>
+          </UserCredentialsContext>
         </Route>
         <Route path='/Donate'>
-          <Nav/>
-          <Donate/>
+          <UserCredentialsContext>
+            <Nav/>
+            <Donate/>
+          </UserCredentialsContext>
         </Route>
         <Route path='/About'>
-          <Nav/>
-          <About/>
+          <UserCredentialsContext>
+            <Nav/>
+            <About/>
+          </UserCredentialsContext>
         </Route>
         <Route exact path="/Map">
           <Redirect to="/"/>

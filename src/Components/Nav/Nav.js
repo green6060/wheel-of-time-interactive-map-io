@@ -9,9 +9,6 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import LeftDrawer from './LeftDrawer'
 import RightDrawer from './RightDrawer'
 import BottomDrawer from './BottomDrawer'
-import { FilterContext } from '../../Helper/common';
-import zIndex from '@material-ui/core/styles/zIndex';
-
 
 const useStyles = makeStyles({
   list: {
@@ -56,7 +53,6 @@ export default function Nav() {
     bottom: false,
     right: false,
   });
-  const formik = {}
   
   const renderList = (anchor) => {
     switch (anchor) {
@@ -65,9 +61,7 @@ export default function Nav() {
       
       case 'right':
         return( 
-          <FilterContext.Provider value={{formikObj: formik}}>
-            <RightDrawer />
-          </FilterContext.Provider>
+          <RightDrawer />
         )
       case 'bottom':
         return <BottomDrawer />

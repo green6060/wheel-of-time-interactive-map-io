@@ -4,7 +4,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
 import { useFormik } from 'formik';
 import SelectDropdown from '../SelectDropdown/SelectDropdown';
-import { BookNames } from '../../Helper/common';
+import { axiosCreateUser, BookNames, UserContext } from '../../Helper/common';
 // import Background from 'https://www.transparenttextures.com/patterns/handmade-paper.png'
 
 
@@ -58,6 +58,15 @@ const validate = values => {
 
 export default function RightDrawer() {
   // const classes = useStyles()
+  const userContext = React.useContext(UserContext)
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    // axiosCreateUser(email, password)
+    // .then(res => {console.log(res)})
+    // .catch(err => {console.log(err)})
+  }
 
   const formik = useFormik({
     initialValues: {
@@ -67,10 +76,12 @@ export default function RightDrawer() {
       // chapter: undefined,
       // season: undefined,
       // episode: undefined,
-    },
+  },
     validate,
-    onSubmit: (values, { setSubmitting }) => {
-      setSubmitting(false)
+    onSubmit: (event, values) => {
+      event.preventDefault()
+      console.log(values)
+      axiosCreateUser('UserTest', 'UserTestPw').then(console.log('success')).catch(console.log('failure'))
    }},
   )
 
@@ -80,8 +91,8 @@ export default function RightDrawer() {
     formik.setFieldValue('spoilerFilter', value)
   }
   return (
+
     <form 
-      onSubmit={formik.handleSubmit}
       // style={{
       //   height: '100%',
       //   backgroundImage: "url(https://www.transparenttextures.com/patterns/light-paper-fibers.png)",
@@ -104,7 +115,6 @@ export default function RightDrawer() {
         />
       </FormGroup>
       {formik.errors.spoilerFilter && formik.touched.spoilerFilter && formik.errors.spoilerFilter}
-
       {formik.values.spoilerFilter === true &&
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <SelectDropdown
@@ -118,7 +128,6 @@ export default function RightDrawer() {
           {formik.errors.bookOrTvFilter && formik.touched.bookOrTvFilter && formik.errors.bookOrTvFilter}
         </div>
       }
-
       {(formik.values.bookOrTvFilter === 'Book' || formik.values.bookOrTvFilter === 'Tv Series') &&
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <SelectDropdown 
@@ -132,10 +141,12 @@ export default function RightDrawer() {
         </div>
       }
       <div style={{display: 'flex', justifyContent: 'center', margin: '5px'}}>
-        <button type='submit' disabled={true}>
+        <button onClick={handleSubmit} disabled={false}>
           Save
         </button>
       </div>
     </form>
   );
 }
+
+// onClick={(event) => {event.preventDefault();console.log('onsubmit formik'); axiosCreateUser('UserTest', 'UserTestPw').then(console.log('success')).catch(console.log('failure'))}}

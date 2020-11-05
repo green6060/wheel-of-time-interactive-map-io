@@ -300,16 +300,6 @@
             ],
             "book": {"title": "The Eye of the World", "chapter": "53"},
             "tvSeries": {"season": "", "episode": ""}
-        },
-        {
-            "title": "",
-            "description": "",
-            "date": "",
-            "location": "",
-            "charactersInvolved": [
-            ],
-            "book": {"title": "", "chapter": ""},
-            "tvSeries": {"season": "", "episode": ""}
-        }  
+        } 
     ]
 }

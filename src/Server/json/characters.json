@@ -1,5 +1,5 @@
 {
-    "characters":[
+    "mainCharacters":[
         {
             "url":"/api/characters/1",
             "name":"Rand al'thor",

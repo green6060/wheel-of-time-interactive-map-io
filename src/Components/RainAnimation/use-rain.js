@@ -1,7 +1,7 @@
 import { useFrame } from 'react-three-fiber'
 import * as THREE from 'three'
 import { Vector3 } from 'three'
-import React, { useRef, useMemo } from 'react'
+import { useRef, useMemo } from 'react'
 
 import { computeBoundingbox } from './utils/element'
 import random from './utils/random'
